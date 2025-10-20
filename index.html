@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CHÚC MỪNG 20/10 - ERMIS</title>
+  <style>
+    :root{
+      --bg:#FFF7FB;
+      --card:#ffffff;
+      --accent:#d63384;
+      --accent-2:#ffb3c6;
+      --gold:#ffd57e;
+      --shadow: 0 8px 30px rgba(17,24,39,0.08);
+      --radius:20px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:radial-gradient(circle at 10% 10%, rgba(214,51,132,0.08), transparent 10%),
+                 radial-gradient(circle at 90% 90%, rgba(255,179,198,0.07), transparent 12%),
+                 var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .card-wrap{
+      width:min(920px, 96vw);
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* Card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+      border-radius:var(--radius);
+      padding:36px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      min-height:360px;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+      background:conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2));
+      filter:blur(36px);opacity:0.18;transform:rotate(20deg);
+    }
+
+    .heading{
+      display:flex;gap:16px;align-items:center;margin-bottom:18px;
+    }
+    .crest{
+      width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;color:white;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(214,51,132,0.2)
+    }
+    .title{font-size:20px;font-weight:700;color:#2b2b2b}
+    .subtitle{font-size:13px;color:#6b6b6b}
+
+    .message{
+      margin-top:6px;font-size:16px;color:#333;line-height:1.6;
+    }
+
+    .signature{
+      margin-top:20px;display:flex;align-items:center;gap:12px;
+    }
+    .avatar{
+      width:52px;height:52px;border-radius:12px;background:linear-gradient(180deg,var(--gold),#ffdba8);
+      display:grid;place-items:center;font-weight:600;color:#5a3b00;box-shadow:0 6px 20px rgba(255,181,0,0.12)
+    }
+    .sig-text{font-size:14px;color:#444}
+
+    /* Right panel: decorative card */
+    .envelope{
+      background: linear-gradient(180deg,#fff 0%, #fff7fb 100%);
+      border-radius:18px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--shadow);
+      min-height:360px;position:relative;overflow:hidden
+    }
+    .heart{
+      width:120px;height:120px;border-radius:20px;background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;color:white;font-size:48px;font-weight:700;transform:rotate(-12deg);box-shadow:0 10px 30px rgba(214,51,132,0.18);
+    }
+    .note{margin-top:18px;text-align:center;font-size:14px;color:#444;padding:0 8px}
+
+    .btns{margin-top:22px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn--primary{background:linear-gradient(90deg,var(--accent),#ff5ea2);color:white}
+    .btn--ghost{background:transparent;border:1px solid rgba(43,43,43,0.08);color:#444}
+
+    /* Confetti - simple decorative dots */
+    .confetti{position:absolute;inset:0;pointer-events:none}
+    .confetti span{position:absolute;width:8px;height:8px;border-radius:50%;opacity:0;animation:pop 1800ms ease-in-out infinite}
+    .confetti span:nth-child(1){left:12%;top:8%;background:#ffd57e;animation-delay:0ms}
+    .confetti span:nth-child(2){left:30%;top:6%;background:#ffb3c6;animation-delay:120ms}
+    .confetti span:nth-child(3){left:46%;top:18%;background:#d63384;animation-delay:240ms}
+    .confetti span:nth-child(4){left:68%;top:4%;background:#ffd57e;animation-delay:360ms}
+    .confetti span:nth-child(5){left:82%;top:16%;background:#ffb3c6;animation-delay:480ms}
+    .confetti span:nth-child(6){left:20%;top:36%;background:#d63384;animation-delay:600ms}
+    @keyframes pop{
+      0%{transform:translateY(0) scale(0.6);opacity:0}
+      20%{opacity:1}
+      60%{transform:translateY(60px) scale(1)}
+      100%{transform:translateY(120px) scale(0.6);opacity:0}
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .card-wrap{grid-template-columns:1fr;}
+      .card{order:2}
+      .envelope{order:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="card-wrap">
+    <article class="card" aria-labelledby="card-title">
+      <div class="heading">
+        <div class="crest">20/10</div>
+        <div>
+          <div id="card-title" class="title">Chúc mừng ngày Phụ nữ Việt Nam</div>
+          <div class="subtitle">Dành tặng cho các quý công nương ở vương quốc ERMIS</div>
+        </div>
+      </div>
+
+      <div class="message">
+        <p>Kính gửi <strong>các quý công nương</strong>,</p>
+        <p>Nhân ngày <strong>20/10 — Ngày Phụ nữ Việt Nam</strong>, Xin gửi tới quý công nương lời chúc an khang, xinh đẹp và tràn đầy niềm vui. Mong rằng mỗi ngày đều mang đến cho quý vị nụ cười, sự ấm áp và thật nhiều hạnh phúc.</p>
+
+        <div class="signature">
+          <div class="avatar">JN</div>
+          <div class="sig-text">
+            <div style="font-weight:700">Bá tước Jerome de Montclair 👑</div>
+            <div style="font-size:13px;color:#7b7b7b">Thân gửi và kính chúc</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="confetti" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </article>
+
+    <aside class="envelope" aria-label="Thiệp gói">
+      <div class="heart">♡</div>
+      <div class="note">Một ly sinh tố, một ly matcha, một nụ cười, một lời chúc nhỏ - nhưng tràn đầy thành ý.</div>
+
+      <div class="btns">
+        <button class="btn btn--primary" id="link_nuoc">Link nước</button>
+      </div>
+
+      <small style="position:absolute;bottom:12px;left:12px;color:#b45b86;font-weight:600">20/10 • Ngày Phụ nữ Việt Nam</small>
+    </aside>
+  </div>
+<script>
+    const btnLN = document.getElementById('link_nuoc');
+    btnLN.addEventListener('click', async () => {
+        alert('Link nước: https://r.grab.com/o/6J7jYBVr');
+        window.location.href = 'https://r.grab.com/o/6J7jYBVr';
+    });
+</script>
+</body>
+</html>
